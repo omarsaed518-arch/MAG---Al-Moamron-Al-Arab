@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>المعمرون العرب للتنمية | MAG - Al-Moamron Al-Arab</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  
+  <meta name="description" content="مجموعة المعمرون العرب للتنمية ش.م.م (MAG) - ريادة الاستثمار والتطوير في الشرق الأوسط منذ 1980 برئاسة د. أسعد عبد المالك.">
+  <meta name="keywords" content="المعمرون العرب, MAG, تنمية, بنية تحتية, طاقة متجددة, استثمار, د. أسعد عبد المالك">
+
+  <!-- الخطوط الرسمية -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- ملف التنسيق -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- شريط الملاحة العلوي -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-image-wrapper">
+          <img src="logo.png" alt="MAG Logo" class="company-logo" onerror="this.style.display='none'; document.getElementById('fallbackBadge').style.display='flex';">
+          <div id="fallbackBadge" class="logo-badge" style="display: none;">MAG</div>
+        </div>
+
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="nav_brand">المعمرون العرب</span>
+          <span class="logo-sub" data-i18n="nav_sub">للتنمية ش.م.م | منذ 1980</span>
+        </div>
+      </a>
+
+      <!-- روابط القائمة لشاشات الكمبيوتر مع الخط الذهبي الثابت -->
+      <nav class="nav-links" id="desktopNav">
+        <a href="#hero" class="nav-link active" data-section="hero" data-i18n="nav_home">الرئيسية</a>
+        <a href="#about" class="nav-link" data-section="about" data-i18n="nav_about">من نحن</a>
+        <a href="#vision" class="nav-link" data-section="vision" data-i18n="nav_vision">رؤيتنا</a>
+        <a href="#divisions" class="nav-link" data-section="divisions" data-i18n="nav_divisions">قطاعاتنا</a>
+        <a href="#team" class="nav-link" data-section="team" data-i18n="nav_team">فريق الإدارة</a>
+        <a href="#history" class="nav-link" data-section="history" data-i18n="nav_history">تاريخنا ومسيرتنا</a>
+        <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">تواصل معنا</a>
+      </nav>
+
+      <!-- أزرار التحكم -->
+      <div class="nav-actions">
+        <!-- زر تبديل اللغة (SVG Globe) -->
+        <button id="langToggleBtn" class="action-btn lang-btn" title="تبديل اللغة / Switch Language">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span id="langText">EN</span>
+        </button>
+
+        <!-- زر Dark / Light Mode (SVG Sun & Moon) -->
+        <button id="themeToggleBtn" class="action-btn theme-btn" title="تبديل وضع العرض">
+          <svg class="svg-icon light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="svg-icon dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="#contact" class="cta-btn desktop-cta" data-i18n="cta_invest">استثمر معنا</a>
+
+        <!-- زر الموبايل -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- قائمة الموبايل -->
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#hero" class="mob-link" data-i18n="nav_home">الرئيسية</a>
+      <a href="#about" class="mob-link" data-i18n="nav_about">من نحن</a>
+      <a href="#vision" class="mob-link" data-i18n="nav_vision">رؤيتنا</a>
+      <a href="#divisions" class="mob-link" data-i18n="nav_divisions">قطاعاتنا</a>
+      <a href="#team" class="mob-link" data-i18n="nav_team">فريق الإدارة</a>
+      <a href="#history" class="mob-link" data-i18n="nav_history">تاريخنا ومسيرتنا</a>
+      <a href="#contact" class="mob-link" data-i18n="nav_contact">تواصل معنا</a>
+      <a href="#contact" class="cta-btn mob-cta" data-i18n="cta_invest_now">ابدأ استثمارك الآن</a>
+    </div>
+  </header>
+
+  <!-- القسم الترحيبي (Hero Section) -->
+  <section id="hero" class="hero-section">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    
+    <div class="hero-content">
+      <div class="hero-badge animate-hero-elem" style="--delay: 0.1s;">
+        <svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span data-i18n="hero_badge">أكثر من 44 عاماً من الريادة والتميز الاستثماري</span>
+      </div>
+      <h1 class="hero-title animate-hero-elem" style="--delay: 0.25s;">
+        <span data-i18n="hero_title_1">نصنع الفرص..</span> <br>
+        <span class="gold-gradient" data-i18n="hero_title_2">ونبني مستقبل التنمية المستدامة</span>
+      </h1>
+      <p class="hero-desc animate-hero-elem" style="--delay: 0.4s;" data-i18n="hero_desc">
+        مجموعة المعمرون العرب للتنمية (MAG) - كيان اقتصادي رائد أسسه د. أسعد عبد المالك في الإسكندرية منذ 1980، يضم 10 شركات كبرى تقود قطاعات البنية التحتية، المدن السكنية، الطاقة المتجددة، والتعليم إقليمياً وعالمياً.
+      </p>
+      <div class="hero-buttons animate-hero-elem" style="--delay: 0.55s;">
+        <a href="#divisions" class="btn btn-primary pulse-btn">
+          <span data-i18n="btn_explore_divisions">استكشف قطاعاتنا</span>
+          <svg class="svg-mini-icon btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </a>
+        <a href="#history" class="btn btn-secondary">
+          <span data-i18n="btn_explore_history">مسيرة المشاريع منذ 1980</span>
+          <svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </a>
+      </div>
+
+      <div class="hero-stats animate-hero-elem" style="--delay: 0.7s;">
+        <div class="stat-card">
+          <div class="stat-num"><span class="counter" data-target="44">0</span>+</div>
+          <div class="stat-label" data-i18n="stat_exp">عاماً من الخبرة العريقة</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num"><span class="counter" data-target="10">0</span></div>
+          <div class="stat-label" data-i18n="stat_sectors">شركات وقطاعات كبرى</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num"><span class="counter" data-target="18">0</span>+</div>
+          <div class="stat-label" data-i18n="stat_milestones">صرح استثماري تاريخي موثق</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num"><span class="counter" data-target="100">0</span>%</div>
+          <div class="stat-label" data-i18n="stat_sustainability">التزام بالمعايير البيئية</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- نبذة عن الشركة والمؤسس (About) -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text-col">
+          <div class="section-tag" data-i18n="tag_about">من نحن</div>
+          <h2 class="section-title">
+            <span data-i18n="about_title_1">صرح اقتصادي متكامل</span> <br>
+            <span class="gold-text" data-i18n="about_title_2">يقود قاطرة التطوير والاستثمار</span>
+          </h2>
+          <p class="section-lead" data-i18n="about_lead">
+            تعتبر "مجموعة المعمرون العرب للتنمية ش.م.م" (MAG) الشركة الأم لمجموعة تضم 10 شركات وكيانات اقتصادية متخصصة تخدم أكثر القطاعات الحيوية محلياً ودولياً.
+          </p>
+          <p class="section-desc" data-i18n="about_desc">
+            تأسست المجموعة في عروس البحر الأبيض المتوسط - الإسكندرية عام 1980، برؤية وتوجيه المطور العام ورئيس مجلس الإدارة د. أسعد عبد المالك، الذي استطاع بناء صرح استثماري قوي يرتكز على أعلى معايير الجودة العالمية، وتقديم مشاريع مستدامة تسهم في مكافحة الفقر وتوفير آلاف فرص العمل وتأهيل الكوادر البشرية.
+          </p>
+
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+              </div>
+              <div>
+                <h4 data-i18n="feat_env_title">استدامة ومسؤولية بيئية</h4>
+                <p data-i18n="feat_env_desc">مشاريع صديقة للبيئة تلتزم بمبادئ الطاقة الخضراء والمعايير المناخية الدولية.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 17 2 2a1 1 0 0 0 1.4 0l4.3-4.3a1 1 0 0 0 0-1.4l-2-2"></path><path d="m18 10 3.3-3.3a1 1 0 0 0 0-1.4l-2.6-2.6a1 1 0 0 0-1.4 0L14 6"></path><path d="m2 14 6 6"></path><path d="M7 8l4-4"></path></svg>
+              </div>
+              <div>
+                <h4 data-i18n="feat_part_title">شراكات دولية استراتيجية</h4>
+                <p data-i18n="feat_part_desc">التعاون مع أكبر الشركاء الدوليين ونقل أحدث التكنولوجيات والحلول الذكية.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards-col">
+          <div class="founder-card glass-panel">
+            <div class="founder-badge" data-i18n="founder_badge">قيادة الرؤية</div>
+            <div class="founder-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width: 48px; height: 48px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3 data-i18n="founder_name">د. أسعد عبد المالك</h3>
+            <span class="founder-role" data-i18n="founder_role">المؤسس ورئيس مجلس إدارة المجموعة</span>
+            <p class="founder-quote" data-i18n="founder_quote">
+              "إن استشراف المستقبل يبدأ بصناعته، وهدفنا هو ترسيخ كيان اقتصادي يبني الإنسان ويطور العمران ويخلق فرصاً استثمارية تدوم لأجيال."
+            </p>
+            <div class="founder-meta">
+              <span><span data-i18n="founder_location">الإسكندرية، مصر</span></span>
+              <span><span data-i18n="founder_since">مستمرون منذ 1980</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الرؤية والرسالة (Vision & Mission) -->
+  <section id="vision" class="section vision-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag" data-i18n="tag_vision">نهجنا وفلسفتنا</div>
+        <h2 class="section-title" data-i18n="vision_main_title">رؤيتنا ورسالتنا نحو المستقبل</h2>
+        <p class="section-subtitle" data-i18n="vision_subtitle">نعمل وفق استراتيجية تنموية واضحة توازن بين الربحية الاقتصادية والأثر الإنساني والمجتمعي المستدام.</p>
+      </div>
+
+      <div class="vision-grid">
+        <div class="vision-card glass-panel">
+          <div class="v-icon-box">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          </div>
+          <h3 data-i18n="vision_card1_title">رؤيتنا الشاملة</h3>
+          <p data-i18n="vision_card1_desc">
+            ريادة التنمية الشاملة والاستثمار متعدد القطاعات في مصر والشرق الأوسط والأسواق العالمية، من خلال تدشين كيانات اقتصادية مستدامة تقدم أعلى قيمة مضافة للمجتمع والشركاء.
+          </p>
+        </div>
+
+        <div class="vision-card glass-panel featured-vision">
+          <div class="v-icon-box">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+          </div>
+          <h3 data-i18n="vision_card2_title">رسالتنا الاستثمارية</h3>
+          <p data-i18n="vision_card2_desc">
+            اقتناص الفرص الاستثمارية الواعدة، وبناء مستقبل أكثر إشراقاً عبر نقل التكنولوجيا وتأهيل المهارات البشرية، وخلق بيئة تدعم الابتكار والنمو الذاتي للفئات الشابة.
+          </p>
+        </div>
+
+        <div class="vision-card glass-panel">
+          <div class="v-icon-box">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V18a1 1 0 0 1-2 0v-1.07A6 6 0 0 1 6 11a1 1 0 0 1 2 0 4 4 0 0 0 8 0 1 1 0 0 1 2 0 6 6 0 0 1-5 5.93z"></path></svg>
+          </div>
+          <h3 data-i18n="vision_card3_title">التزامنا الأخضر</h3>
+          <p data-i18n="vision_card3_desc">
+            المساهمة الفعالة في حماية البيئة عبر التوافق التام مع اللوائح الدولية للطاقة النظيفة، ومكافحة التلوث، وابتكار حلول حضارية مستدامة تضمن أمان الأجيال القادمة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قطاعات المجموعة العشرة (Divisions) -->
+  <section id="divisions" class="section divisions-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag" data-i18n="tag_divisions">تنوع استثماري متكامل</div>
+        <h2 class="section-title" data-i18n="divisions_title">قطاعات وشركات مجموعة MAG</h2>
+        <p class="section-subtitle" data-i18n="divisions_subtitle">تغطي المجموعة 10 قطاعات استراتيجية تمثل عصب النمو الاقتصادي والتنموي في أي دولة متقدمة.</p>
+      </div>
+
+      <div class="divisions-grid">
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
+          <h3 data-i18n="div_1_title">البنية التحتية والمقاولات</h3>
+          <p data-i18n="div_1_desc">تنفيذ مشاريع البنية التحتية الضخمة وشبكات المرافق الحيوية وأعمال الهندسة المدنية الكبرى بأعلى كودات الأمان والجودة العالمية.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"></path></svg></div>
+          <h3 data-i18n="div_2_title">المدن السكنية والأبراج والمنتجعات</h3>
+          <p data-i18n="div_2_desc">تخطيط وإنشاء مجمعات سكنية متكاملة، كمبوندات فاخرة، أبراج سكنية وتجارية، ومنتجعات سياحية بتصميمات معمارية فريدة.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line></svg></div>
+          <h3 data-i18n="div_3_title">قطاع الطاقة المتجددة</h3>
+          <p data-i18n="div_3_desc">الاستثمار في حلول الطاقة النظيفة والشمسية والرياح للمساهمة في التحول البيئي وتقليل الانبعاثات الكربونية.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+          <h3 data-i18n="div_4_title">التعليم وتطوير الكوادر</h3>
+          <p data-i18n="div_4_desc">إنشاء مدارس وصروح تعليمية مبتكرة ومراكز تدريبية متقدمة لتأهيل الأجيال والشباب بالمهارات العالمية لسوق العمل.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+          <h3 data-i18n="div_5_title">المستشفيات والرعاية الصحية</h3>
+          <p data-i18n="div_5_desc">تطوير وتشغيل مراكز طبية ومستشفيات متطورة ومجهزة بأحدث التجهيزات والتقنيات الطبية لتقديم أعلى مستوى عناية صحية.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 18h16M6 14h12M8 10h8M10 6h4"></path></svg></div>
+          <h3 data-i18n="div_6_title">الفنادق والضيافة الفاخرة</h3>
+          <p data-i18n="div_6_desc">إدارة وتشغيل الفنادق والمنتجعات السياحية الراقية التي ترفع من جاذبية مصر السياحية وتقدم تجربة إقامة استثنائية.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div>
+          <h3 data-i18n="div_7_title">الأغذية والمشروبات</h3>
+          <p data-i18n="div_7_desc">سلاسل ومشاريع تقديم وتوزيع الأغذية والمشروبات بأعلى معايير سلامة الغذاء العالمية والجودة التشغيلية المنضبطة.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22v-9"></path><path d="M12 13c-3-3-3-7 0-10 3 3 3 7 0 10z"></path></svg></div>
+          <h3 data-i18n="div_8_title">الاستثمار الزراعي والري الحديث</h3>
+          <p data-i18n="div_8_desc">استصلاح الأراضي والزراعة الذكية والأنظمة الحديثة للري للمساهمة في تحقيق الأمن الغذائي والتنمية الزراعية المتكاملة.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h4v16"></path></svg></div>
+          <h3 data-i18n="div_9_title">الصناعة والإنتاج الوطني</h3>
+          <p data-i18n="div_9_desc">تأسيس وتشغيل مصانع وخطوط إنتاج تدعم سلاسل التوريد المحلية والبدائل الوطنية للتصدير والتصنيع المحلي المستدام.</p>
+        </div>
+
+        <div class="div-card glass-panel">
+          <div class="div-icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+          <h3 data-i18n="div_10_title">الاستثمار وإدارة الأصول والمشاريع</h3>
+          <p data-i18n="div_10_desc">صياغة خطط واستراتيجيات استثمارية عالية الكفاءة للمستثمرين المحليين والدوليين لإدارة رأس المال وتحقيق عوائد مجزية.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم فريق الإدارة والقيادة التنفيذية (Our Team Section) -->
+  <section id="team" class="section team-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag" data-i18n="tag_team">كفاءات وقيادات ملهمة</div>
+        <h2 class="section-title" data-i18n="team_title">فريق الإدارة والقيادة التنفيذية</h2>
+        <p class="section-subtitle" data-i18n="team_subtitle">
+          تكمن قوتنا في تميز كوادرنا؛ فريق قيادي متكامل يجمع بين أرقى الخبرات في تطوير الأعمال، الإدارة القانونية، الحسابات المالية، والمبيعات لضمان نجاح كل مشروع.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- معتز عبد المالك -->
+        <div class="team-card glass-panel">
+          <div class="team-img-wrapper">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/f10389632-AQEygN5BqpTbnrvE.jpg" alt="معتز عبد المالك" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80'">
+            <div class="team-overlay">
+              <span class="team-dept" data-i18n="team_dept_exec">القيادة التنفيذية</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name" data-i18n="team_member_1_name">معتز عبد المالك</h3>
+            <span class="team-role" data-i18n="team_member_1_role">الرئيس التنفيذي ومطور الأعمال</span>
+            <p class="team-subrole">CEO / Business Developer</p>
+          </div>
+        </div>
+
+        <!-- فهد سرور -->
+        <div class="team-card glass-panel">
+          <div class="team-img-wrapper">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/f9789632-A1awM42LkMC8jenD.jpg" alt="فهد سرور" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=80'">
+            <div class="team-overlay">
+              <span class="team-dept" data-i18n="team_dept_legal">الشؤون القانونية</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name" data-i18n="team_member_2_name">فهد سرور</h3>
+            <span class="team-role" data-i18n="team_member_2_role">الممثل والمستشار القانوني</span>
+            <p class="team-subrole">Legal Representative</p>
+          </div>
+        </div>
+
+        <!-- محمد عبد المنعم -->
+        <div class="team-card glass-panel">
+          <div class="team-img-wrapper">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/f10031616-mk3zRZbW4LizMZkg.jpg" alt="محمد عبد المنعم" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&auto=format&fit=crop&q=80'">
+            <div class="team-overlay">
+              <span class="team-dept" data-i18n="team_dept_finance">القطاع المالي</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name" data-i18n="team_member_3_name">محمد عبد المنعم</h3>
+            <span class="team-role" data-i18n="team_member_3_role">مدير الحسابات والمالية</span>
+            <p class="team-subrole">Accounting Manager</p>
+          </div>
+        </div>
+
+        <!-- حنان عبد العظيم -->
+        <div class="team-card glass-panel">
+          <div class="team-img-wrapper">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/f9650624-YanyRr5Beph9ogRe.jpg" alt="حنان عبد العظيم" class="team-img" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80'">
+            <div class="team-overlay">
+              <span class="team-dept" data-i18n="team_dept_sales">المبيعات والتسويق</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <h3 class="team-name" data-i18n="team_member_4_name">حنان عبد العظيم</h3>
+            <span class="team-role" data-i18n="team_member_4_role">مديرة المبيعات والتعاقدات</span>
+            <p class="team-subrole">Sales Manager</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- مسار التاريخ مع الصور والمواقع المترجمة (History Timeline) -->
+  <section id="history" class="section history-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag" data-i18n="tag_history">مسار دقيق وموثق بالسنوات</div>
+        <h2 class="section-title" data-i18n="history_title">مسيرة النجاح والصروح الكبرى (1980 - 2026)</h2>
+        <p class="section-subtitle" data-i18n="history_subtitle">توثيق شامل ومفصل لأبرز محطات ومشاريع مجموعة المعمرون العرب بالصور الحقيقية والتفاصيل.</p>
+        
+        <div class="timeline-filters">
+          <button class="t-filter-btn active" data-filter="all" data-i18n="filter_all">جميع المحطات والمشاريع</button>
+          <button class="t-filter-btn" data-filter="residential" data-i18n="filter_res">أبراج ومدن سكنية</button>
+          <button class="t-filter-btn" data-filter="health-edu" data-i18n="filter_health_edu">صحة وتعليم</button>
+          <button class="t-filter-btn" data-filter="hospitality-ind" data-i18n="filter_hosp_ind">فندقة وصناعة وطاقة</button>
+        </div>
+      </div>
+
+      <div class="timeline" id="timelineContainer">
+        <div class="timeline-progress-bar" id="timelineProgressBar"></div>
+
+        <!-- 1980: التأسيس -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://tse4.mm.bing.net/th/id/OIP.MaV70yJnt-CFNYpxR6zCxgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Alexandria Foundation 1980" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_alex">الإسكندرية</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">1980</span>
+              <span class="timeline-badge" data-i18n="badge_founded">التأسيس والانطلاق</span>
+            </div>
+            <h3 data-i18n="hist_1980_title">انطلاق المجموعة في الإسكندرية</h3>
+            <p data-i18n="hist_1980_desc">تأسيس مجموعة المعمرون العرب في الإسكندرية برؤية د. أسعد عبد المالك بهدف وضع معايير ذهبية جديدة للإنشاءات وخدمات التطوير والاستشارات.</p>
+          </div>
+        </div>
+
+        <!-- 1997: برج جليم -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/27-mP4nVJRw6jHDqz4G.png" alt="Gleem Tower" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_gleem">جليم - الإسكندرية</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">1997</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري</span>
+            </div>
+            <h3 data-i18n="hist_1997_gleem_title">برج جليم (Gleem Tower)</h3>
+            <p data-i18n="hist_1997_gleem_desc">أحد المعالم المعمارية الرائدة في حي جليم الراقي بالإسكندرية، صرح سكني وتجاري متكامل تم تشييده بأعلى المواصفات الإنشائية.</p>
+          </div>
+        </div>
+
+        <!-- 1997: فيروزة لوران -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/1h-d95Kx1WQNaspVvRE.png" alt="Fayrouza Louran" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_louran">لوران - طريق الحرية</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">1997</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري</span>
+            </div>
+            <h3 data-i18n="hist_1997_louran_title">مشروع فيروزة لوران (Fayrouza Louran)</h3>
+            <p data-i18n="hist_1997_louran_desc">صرح معماري سكني وتجاري فخم في قلب منطقة لوران بالإسكندرية، جمع بين التصميم الكلاسيكي والخدمات الحديثة.</p>
+          </div>
+        </div>
+
+        <!-- 2000: برج الأطباء -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/32-mp8vR5rylXIPZRB8.png" alt="Al Atebaa Tower" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_atebaa">مجمع عيادات وإداري</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2000</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري وإداري</span>
+            </div>
+            <h3 data-i18n="hist_2000_atebaa_title">برج الأطباء (Al Atebaa Tower)</h3>
+            <p data-i18n="hist_2000_atebaa_desc">إنشاء وتدشين برج الأطباء ليخدم الأنشطة السكنية والعيادات الطبية التخصصية والمقرات التجارية في موقع استراتيجي حيوي.</p>
+          </div>
+        </div>
+
+        <!-- 2001: سموحة توب هاوس -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/36-mePvRMr4XjhOpM11.png" alt="Smouha Top House" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_smouha">سموحة الراقية</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2001</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري</span>
+            </div>
+            <h3 data-i18n="hist_2001_smouha_title">سموحة توب هاوس (Smouha Top House)</h3>
+            <p data-i18n="hist_2001_smouha_desc">مشروع سكني وتجاري فاخر في منطقة سموحة الراقية، تميز بتخطيطه العصري ومساحاته الرحبة وموقعه المميز.</p>
+          </div>
+        </div>
+
+        <!-- 2001: مدينة المستقبل -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22v-9"></path><path d="M12 13c-3-3-3-7 0-10 3 3 3 7 0 10z"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/3h-YBgrN7EEvPT5aODZ.png" alt="Almostakbal City" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_mostakbal">مجتمع عمراني متكامل</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2001</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">مجمع عمراني متكامل</span>
+            </div>
+            <h3 data-i18n="hist_2001_mostakbal_title">مدينة المستقبل (Almostakbal City)</h3>
+            <p data-i18n="hist_2001_mostakbal_desc">مشروع عمراني متكامل يقدم حلول إسكان عصرية ومراكز تجارية ومساحات خدمية مدروسة بعناية لتلبية تطلعات العائلات.</p>
+          </div>
+        </div>
+
+        <!-- 2003: أبراج جولدن سيتي -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://tse3.mm.bing.net/th/id/OIP.veB5atusyN_fBldbHB8iXgHaHb?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Golden City Towers" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_golden">صرح أيقوني</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2003</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري</span>
+            </div>
+            <h3 data-i18n="hist_2003_golden_title">أبراج جولدن سيتي (Golden City Towers)</h3>
+            <p data-i18n="hist_2003_golden_desc">سلسلة أبراج كبرى تمثل علامة فارقة في التطوير العمراني بمرافق حديثة وواجهات معمارية فخمة جذبت كبار المستثمرين.</p>
+          </div>
+        </div>
+
+        <!-- 2005: أبراج المعتز بالله -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/2h-AwvMR4EVE8iLNR0V.png" alt="Almoataz Bellah Towers" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_moataz">إطلالة معمارية</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2005</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري</span>
+            </div>
+            <h3 data-i18n="hist_2005_moataz_title">أبراج المعتز بالله (Almoataz Bellah Towers)</h3>
+            <p data-i18n="hist_2005_moataz_desc">مجمع أبراج يجسد معايير الهندسة المتطورة في الإسكندرية ويوفر وحدات سكنية وتجارية متكاملة الخدمات.</p>
+          </div>
+        </div>
+
+        <!-- 2008: أبراج المعمرون بلازا -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="6 2 18 2 22 8 12 22 2 8 6 2"></polygon></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/34-m5Kw1o3q5GHO9NgM.png" alt="Almoameron Plaza Towers" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_plaza">بلازا المعمرون</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2008</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري فندقي</span>
+            </div>
+            <h3 data-i18n="hist_2008_plaza_title">أبراج المعمرون بلازا (Almoameron Plaza Towers)</h3>
+            <p data-i18n="hist_2008_plaza_desc">صرح أيقوني يحمل اسم المجموعة، يقدم نمط حياة راقٍ يجمع بين الوحدات السكنية الفاخرة والمساحات التجارية الكبرى.</p>
+          </div>
+        </div>
+
+        <!-- 2008: الفلكي مول وفندق -->
+        <div class="timeline-item" data-category="hospitality-ind">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/20-AoPvRqRM3lHavaQW.png" alt="Al Falaky Mall & Hotel" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_falaky">مول وفندق تجاري</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2008</span>
+              <span class="timeline-badge" data-i18n="badge_mall_hotel">مول تجاري وفندق</span>
+            </div>
+            <h3 data-i18n="hist_2008_falaky_title">الفلكي مول وفندق (Al Falaky Mall & Hotel)</h3>
+            <p data-i18n="hist_2008_falaky_desc">مشروع تجاري وفندقي رائد يضم مركز تسوق متكامل ووحدات ضيافة فندقية تخدم الحركة التجارية والسياحية.</p>
+          </div>
+        </div>
+
+        <!-- 2009: المندرة جرين -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/28-AMqbKNyeMvu1PyKq.png" alt="Almandara Green" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_mandara">بيئة خضراء نقية</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2009</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري صديق للبيئة</span>
+            </div>
+            <h3 data-i18n="hist_2009_mandara_title">كمبوند المندرة جرين (Almandara Green)</h3>
+            <p data-i18n="hist_2009_mandara_desc">مشروع سكني تجاري رائد يركز على المساحات الخضراء والبيئة الصحية النقية للساكنين في منطقة المندرة الساحلية.</p>
+          </div>
+        </div>
+
+        <!-- 2017: مستشفى دار العلاج -->
+        <div class="timeline-item" data-category="health-edu">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/img_8353-AVLpRwnyaaTK84Kv.JPG" alt="Dar Al Elag Hospital" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_dar">صرح طبي متكامل</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2017</span>
+              <span class="timeline-badge" data-i18n="badge_healthcare">رعاية صحية ومستشفيات</span>
+            </div>
+            <h3 data-i18n="hist_2017_dar_title">مستشفى دار العلاج (Dar Al Elag Hospital)</h3>
+            <p data-i18n="hist_2017_dar_desc">تدشين صرح طبي متكامل ومجهز بأحدث الأجهزة والتقنيات الطبية وغرف العمليات لتقديم رعاية صحية نموذجية للمرضى.</p>
+          </div>
+        </div>
+
+        <!-- 2018: مصنع ETD -->
+        <div class="timeline-item" data-category="hospitality-ind">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/img_5009-AE0oJBeejbUXJ02D.JPG" alt="ETD Industrial Factory" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_etd">مجمع صناعي</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2018</span>
+              <span class="timeline-badge" data-i18n="badge_industrial">قطاع الصناعة والإنتاج</span>
+            </div>
+            <h3 data-i18n="hist_2018_etd_title">مجمع مصانع ETD (ETD Factory)</h3>
+            <p data-i18n="hist_2018_etd_desc">إنشاء مجمع صناعي متقدم لتعزيز الصناعة الوطنية وتوفير منتجات عالية الجودة تدعم خطوط التوريد والتصدير.</p>
+          </div>
+        </div>
+
+        <!-- 2021: فندق هابي ستاي -->
+        <div class="timeline-item" data-category="hospitality-ind">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/37-AR0yr6BE1zSEjEj6.png" alt="Happy Stay Hotel" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_hotel">ضيافة وفندق عصري</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2021</span>
+              <span class="timeline-badge" data-i18n="badge_hospitality">قطاع الفندقة والضيافة</span>
+            </div>
+            <h3 data-i18n="hist_2021_hotel_title">فندق هابي ستاي (Happy Stay Hotel)</h3>
+            <p data-i18n="hist_2021_hotel_desc">إطلاق فندق عصري يقدم تجربة ضيافة استثنائية وإقامة مريحة للزوار والسياح بمواصفات جودة فندقية ممتازة.</p>
+          </div>
+        </div>
+
+        <!-- 2022: منتجع سكاي أزور -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 18h20M12 2v16M6 18c0-3.3 2.7-6 6-6s6 2.7 6 6"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/15-d95KxK2g1XHKjMRo.png" alt="Sky Azure Resort" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_azure">منتجع ساحلي فاخر</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2022</span>
+              <span class="timeline-badge" data-i18n="badge_resort">منتجع سكني سياحي</span>
+            </div>
+            <h3 data-i18n="hist_2022_azure_title">منتجع سكاي أزور (Sky Azure Resort)</h3>
+            <p data-i18n="hist_2022_azure_desc">منتجع راقٍ يجمع بين الإطلالات الساحرة والوحدات السكنية العصرية بتصميمات عالمية لتجربة معيشية فريدة.</p>
+          </div>
+        </div>
+
+        <!-- 2022: منتجع كينج لايف -->
+        <div class="timeline-item" data-category="residential">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/19-Yg2WRqnREEHW964l.png" alt="King Life Resort" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_kinglife">كينج لايف الفاخر</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2022</span>
+              <span class="timeline-badge" data-i18n="badge_res_com">سكني وتجاري فندقي</span>
+            </div>
+            <h3 data-i18n="hist_2022_kinglife_title">منتجع كينج لايف (King Life Resort)</h3>
+            <p data-i18n="hist_2022_kinglife_desc">مشروع سكني وتجاري متكامل يقدم أرقى مستويات الرفاهية والخدمات الترفيهية والمجتمعية المتكاملة.</p>
+          </div>
+        </div>
+
+        <!-- 2022: مدرسة EDU -->
+        <div class="timeline-item" data-category="health-edu">
+          <div class="timeline-dot"><svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-img-box">
+              <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=594,h=528,fit=crop/mxBZR7x4q3tNzV74/12-dWxyRyNr0PFxoNX6.png" alt="EDU School" class="timeline-img" loading="lazy">
+              <span class="img-badge"><span data-i18n="loc_edu">مدرسة دولية للغات</span></span>
+            </div>
+            <div class="timeline-header">
+              <span class="timeline-year">2022</span>
+              <span class="timeline-badge" data-i18n="badge_education">قطاع التعليم والمدارس</span>
+            </div>
+            <h3 data-i18n="hist_2022_edu_title">مدرسة EDU الدولية للغات (EDU School)</h3>
+            <p data-i18n="hist_2022_edu_desc">تأسيس صرح تعليمي متطور يطبق أحدث المناهج التفاعلية لبناء مهارات وقدرات قادة المستقبل.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم التواصل والخريطة والدخول المباشر لواتساب -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag" data-i18n="tag_contact">ابقى على تواصل</div>
+        <h2 class="section-title" data-i18n="contact_title">جاهزون لبحث فرص التنمية والاستثمار</h2>
+        <p class="section-subtitle" data-i18n="contact_subtitle">فريقنا ومستشارونا مستعدون لمناقشة استفساراتكم ومشاريعكم وشراكاتكم المستقبلية.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- بيانات المقر والخريطة -->
+        <div class="contact-info-card glass-panel">
+          <h3 data-i18n="hq_title">المقر الرئيسي لمجموعة المعمرون العرب</h3>
+          <p data-i18n="hq_desc">يسعدنا استقبالكم في مقرنا الرسمي لمناقشة الشراكات والفرص الاستثمارية.</p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-text">
+                <label data-i18n="lbl_address">العنوان الدقيق</label>
+                <span data-i18n="val_address">699 طريق الحرية (طريق أبو قير)، ثروت / لوران، الإسكندرية، مصر</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="info-text">
+                <label data-i18n="lbl_phone">الهاتف وخدمة العملاء</label>
+                <a href="tel:+201034187877" dir="ltr">+20 103 418 7877</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <!-- SVG WhatsApp -->
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.82 14.07c-.24.68-1.4 1.26-1.94 1.33-.51.07-1.17.1-3.39-.82-2.83-1.17-4.66-4.04-4.8-4.23-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07 1-2.35.26-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.15.12.32.02.51-.1.2-.15.32-.3.49-.15.18-.31.4-.45.54-.15.15-.31.31-.13.61.17.3 1.05 1.73 2.27 2.81 1.57 1.4 2.89 1.83 3.3 2.04.41.2.65.17.89-.1.24-.28 1.03-1.2 1.31-1.61.27-.41.55-.34.92-.2.37.14 2.37 1.12 2.77 1.32.41.2.68.3.78.47.1.18.1 1.01-.14 1.69z"/></svg>
+              </div>
+              <div class="info-text">
+                <label data-i18n="lbl_whatsapp">واتساب خدمة المستثمرين</label>
+                <a href="https://wa.me/201034187877" target="_blank" rel="noopener" dir="ltr">+20 103 418 7877</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="info-text">
+                <label data-i18n="lbl_email">البريد الإلكتروني الرسمي</label>
+                <a href="mailto:info@almoameron-alarab.com">info@almoameron-alarab.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="info-text">
+                <label data-i18n="lbl_hours">مواعيد العمل الرسمية</label>
+                <span data-i18n="val_hours">السبت - الخميس: من 9:00 صباحاً حتى 5:00 مساءً</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- الخريطة الدقيقة في لوران / ثروت الإسكندرية -->
+          <div class="map-container">
+            <iframe 
+              src="https://maps.google.com/maps?q=31.2407,29.9676&hl=ar&z=16&output=embed" 
+              loading="lazy" 
+              title="مقر المعمرون العرب في لوران طريق الحرية الإسكندرية">
+            </iframe>
+          </div>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=699+Al+Horeya+Road+Loran+Alexandria" target="_blank" rel="noopener" class="open-map-btn">
+            <svg class="svg-mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+            <span data-i18n="btn_open_google_maps">فتح الموقع مباشرة في تطبيق خرائط Google</span>
+          </a>
+        </div>
+
+        <!-- استمارة إرسال طلب استثمار مع التحويل التلقائي للواتساب بالرقم الجديد -->
+        <div class="contact-form-card glass-panel">
+          <h3 data-i18n="form_title">أرسل استفسارك أو طلب استثمارك</h3>
+          <p data-i18n="form_desc">املأ البيانات وسيقوم النظام بنقلك فوراً للواتساب مع رسالة جاهزة للإرسال بنقرة واحدة.</p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="userName" data-i18n="form_lbl_name">الاسم الكامل *</label>
+              <input type="text" id="userName" required data-i18n-ph="ph_name" placeholder="أدخل اسمك الكريم">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="userEmail" data-i18n="form_lbl_email">البريد الإلكتروني *</label>
+                <input type="email" id="userEmail" required data-i18n-ph="ph_email" placeholder="example@domain.com">
+              </div>
+              <div class="form-group">
+                <label for="userPhone" data-i18n="form_lbl_phone">رقم الهاتف / واتساب *</label>
+                <input type="tel" id="userPhone" required data-i18n-ph="ph_phone" placeholder="+20 100 000 0000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="userSector" data-i18n="form_lbl_sector">القطاع المستهدف للاستثمار أو الشراكة</label>
+              <select id="userSector">
+                <option value="بنية تحتية وتطوير عقاري" data-i18n="opt_infra">البنية التحتية والتطوير العقاري</option>
+                <option value="طاقة متجددة واستدامة" data-i18n="opt_energy">الطاقة المتجددة والاستدامة</option>
+                <option value="تعليم وتدريب" data-i18n="opt_edu">التعليم وتأهيل الكوادر</option>
+                <option value="رعاية صحية ومستشفيات" data-i18n="opt_health">الرعاية الصحية والمستشفيات</option>
+                <option value="فنادق وضيافة وسياحة" data-i18n="opt_hosp">الفنادق والضيافة والسياحة</option>
+                <option value="صناعة وتوريدات" data-i18n="opt_ind">الصناعة وخطوط الإنتاج</option>
+                <option value="استثمار عام وشراكات دولية" data-i18n="opt_general">استثمار عام وشراكات استراتيجية</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="userMessage" data-i18n="form_lbl_message">تفاصيل الاستفسار أو المقترح *</label>
+              <textarea id="userMessage" rows="4" required data-i18n-ph="ph_message" placeholder="اكتب تفاصيل مشروعك أو استفسارك هنا..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn pulse-btn">
+              <span data-i18n="btn_submit">إرسال ومتابعة عبر واتساب</span>
+              <svg class="svg-mini-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.82 14.07c-.24.68-1.4 1.26-1.94 1.33-.51.07-1.17.1-3.39-.82-2.83-1.17-4.66-4.04-4.8-4.23-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07 1-2.35.26-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.15.12.32.02.51-.1.2-.15.32-.3.49-.15.18-.31.4-.45.54-.15.15-.31.31-.13.61.17.3 1.05 1.73 2.27 2.81 1.57 1.4 2.89 1.83 3.3 2.04.41.2.65.17.89-.1.24-.28 1.03-1.2 1.31-1.61.27-.41.55-.34.92-.2.37.14 2.37 1.12 2.77 1.32.41.2.68.3.78.47.1.18.1 1.01-.14 1.69z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <div class="logo-image-wrapper">
+            <img src="logo.png" alt="MAG Logo" class="company-logo footer-company-logo" onerror="this.style.display='none'; document.getElementById('footerFallbackBadge').style.display='flex';">
+            <div id="footerFallbackBadge" class="logo-badge" style="display: none;">MAG</div>
+          </div>
+          <span class="f-name" data-i18n="footer_brand">المعمرون العرب للتنمية</span>
+        </div>
+        <p class="footer-about" data-i18n="footer_about">
+          مجموعة استثمارية وتنموية مصرية كبرى تأسست عام 1980 في الإسكندرية، تضم 10 شركات تقود أهم القطاعات الاقتصادية برؤية استدامة إقليمية وعالمية.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_col_links">روابط سريعة</h4>
+        <ul>
+          <li><a href="#hero" class="footer-gold-link" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#about" class="footer-gold-link" data-i18n="nav_about">عن المجموعة والمؤسس</a></li>
+          <li><a href="#vision" class="footer-gold-link" data-i18n="nav_vision">الرؤية والرسالة</a></li>
+          <li><a href="#divisions" class="footer-gold-link" data-i18n="nav_divisions">القطاعات والشركات</a></li>
+          <li><a href="#team" class="footer-gold-link" data-i18n="nav_team">فريق الإدارة</a></li>
+          <li><a href="#history" class="footer-gold-link" data-i18n="nav_history">تاريخنا العريق (1980 - 2026)</a></li>
+          <li><a href="#contact" class="footer-gold-link" data-i18n="nav_contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_col_divisions">قطاعات التنمية</h4>
+        <ul>
+          <li><a href="#divisions" class="footer-gold-link" data-i18n="div_1_title">البنية التحتية والمقاولات</a></li>
+          <li><a href="#divisions" class="footer-gold-link" data-i18n="div_2_title">المدن السكنية والأبراج</a></li>
+          <li><a href="#divisions" class="footer-gold-link" data-i18n="div_3_title">قطاع الطاقة المتجددة</a></li>
+          <li><a href="#divisions" class="footer-gold-link" data-i18n="div_5_title">المستشفيات والرعاية الصحية</a></li>
+          <li><a href="#divisions" class="footer-gold-link" data-i18n="div_4_title">التعليم والمدارس</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_col_contact">المقر والتواصل</h4>
+        <p><span data-i18n="val_address">699 طريق الحرية، ثروت / لوران، الإسكندرية</span></p>
+        <p><a href="tel:+201034187877" class="footer-gold-link" dir="ltr">+20 103 418 7877</a></p>
+        <p><a href="mailto:info@almoameron-alarab.com" class="footer-gold-link">info@almoameron-alarab.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container f-bottom-flex">
+        <p data-i18n="footer_copyright">© 1980 - 2026 مجموعة المعمرون العرب للتنمية ش.م.م (MAG). جميع الحقوق محفوظة.</p>
+        <p class="designer-credit" data-i18n="footer_credit">Designed with Modern Ultra Luxury & Performance Standards</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر واتساب العائم بالأيقونة الصريحة المظبوطة بدون تشويه -->
+  <a href="https://wa.me/201034187877" class="whatsapp-bubble" target="_blank" rel="noopener" title="محادثة واتساب سريعة">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.82 14.07c-.24.68-1.4 1.26-1.94 1.33-.51.07-1.17.1-3.39-.82-2.83-1.17-4.66-4.04-4.8-4.23-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07 1-2.35.26-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2.01.9 2.16.07.15.12.32.02.51-.1.2-.15.32-.3.49-.15.18-.31.4-.45.54-.15.15-.31.31-.13.61.17.3 1.05 1.73 2.27 2.81 1.57 1.4 2.89 1.83 3.3 2.04.41.2.65.17.89-.1.24-.28 1.03-1.2 1.31-1.61.27-.41.55-.34.92-.2.37.14 2.37 1.12 2.77 1.32.41.2.68.3.78.47.1.18.1 1.01-.14 1.69z"/></svg>
+  </a>
+
+  <!-- رسالة التنبيه Toast -->
+  <div id="toastMessage" class="toast-notification"></div>
+
+  <!-- ملف الجافاسكريبت -->
+  <script src="app.js"></script>
+</body>
+</html>
